@@ -8,15 +8,16 @@
 <body>
   <nav>
     <ul>
-      <li><a href="#" onclick="loadPage('home.html')">Home</a></li>
-      <li><a href="#" onclick="loadPage('about.html')">About</a></li>
-      <li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>
+      <li><a href="#" onclick="loadPage('home.html'); setActive(this); return false;" class="active">Home</a></li>
+      <li><a href="#" onclick="loadPage('about.html'); setActive(this); return false;">About</a></li>
+      <li><a href="#" onclick="loadPage('contact.html'); setActive(this); return false;">Contact</a></li>
     </ul>
   </nav>
 
-  <main id="content"></main>
+  <main id="content">
+    <!-- Loaded content will appear here -->
+  </main>
 
   <script src="script.js"></script>
-  
 </body>
 </html>
