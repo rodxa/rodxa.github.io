@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Test GitHub Pages</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Single Page with Dynamic Content</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is a simple test website.</p>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="loadPage('home.html')">Home</a></li>
+      <li><a href="#" onclick="loadPage('about.html')">About</a></li>
+      <li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="content"></main>
+
+  <script src="script.js"></script>
+  
 </body>
 </html>
