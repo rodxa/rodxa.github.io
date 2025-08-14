@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <title>Single Page with Dynamic Content</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <nav>
     <ul>
       <li><a href="#" onclick="loadPage('home.html'); setActive(this); return false;" class="active">Home</a></li>
-      <li><a href="#" onclick="loadPage('about.html'); setActive(this); return false;">About</a></li>
+      <li><a href="#" onclick="loadPage('devlog.html'); setActive(this); return false;">Dev Logs</a></li>
+            <li><a href="#" onclick="loadPage('about.html'); setActive(this); return false;">About</a></li>
       <li><a href="#" onclick="loadPage('contact.html'); setActive(this); return false;">Contact</a></li>
     </ul>
   </nav>
