@@ -1,16 +1,16 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #474747;
+  background: #768b9c;
   overflow-y: scroll;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, textarea::-webkit-scrollbar {
   width: 8px;
   background-color: #000000;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb{
   background-color: rgb(255, 255, 255);
   border-radius: 0px;
 }
@@ -63,7 +63,7 @@ nav ul li {
   margin: 0px 5px;
 }
 
-nav ul li a {
+nav ul li a{
   color: white;
   border: solid rgba(255, 255, 255, 0);
   text-decoration: none;
@@ -80,13 +80,56 @@ nav ul li a:hover {
   transition: ease-in-out 0.2s;
 }
 
+.sub{
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  margin: 10px;
+  border: solid rgba(255, 255, 255, 0);
+  font-size: 18px;
+  padding: 8px 16px;
+  transition: background-color 0.2s ease;
+}
+
+button{
+  cursor: pointer;
+}
+
+.sub:hover{
+  border: solid rgb(0, 0, 0);
+  color: #000000;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.sub:focus{
+  outline: none;
+  border: solid rgb(0, 0, 0);
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.sub::placeholder{
+  color: #ffffff;
+}
+
+.sub:hover::placeholder{
+  color: #000000;
+}
+
+textarea{
+  width:465px;
+  height: 200px;
+  resize: none;
+}
+
+
 nav ul li a.active {
   background-color: #ffffff;
   color: black;
   cursor: default;
 }
 
-.box {
+.box, .box-hover {
   border: solid 5px rgba(255, 255, 255, 0);
   max-width: 80%;
   margin: 40px auto;
@@ -97,8 +140,9 @@ nav ul li a.active {
   transition: ease-in-out 0.2s;
 }
 
-.box:hover{
+.box-hover:hover{
   border: solid 5px rgb(0, 0, 0);
+  cursor: pointer;
   transition: ease-in-out 0.2s;
 }
 
