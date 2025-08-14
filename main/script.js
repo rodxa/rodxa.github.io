@@ -12,5 +12,5 @@ function setActive(element) {
   element.classList.add('active');
 }
 
-// Load default page on start
+// default page
 loadPage('home.html');
