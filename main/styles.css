@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
   border-radius: 4px;
 }
 
@@ -86,7 +86,8 @@ nav ul li a.active {
   border: solid 5px rgba(255, 255, 255, 0);
   max-width: 700px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 10px 20px;
+  padding-top: 14px;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   transition: ease-in-out 0.2s;
@@ -96,4 +97,9 @@ nav ul li a.active {
   border: solid 5px rgb(0, 0, 0);
   transition: ease-in-out 0.2s;
   cursor: pointer;
+}
+
+.image{
+  width: 150px;
+  height: 150px;
 }
