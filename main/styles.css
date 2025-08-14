@@ -54,3 +54,9 @@ main {
 h1 {
   color: #007acc;
 }
+
+.box{
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+}
