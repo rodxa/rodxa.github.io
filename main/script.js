@@ -14,3 +14,30 @@ function setActive(element) {
 
 // default page
 loadPage('home.html');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUl = document.querySelector('nav ul');
+  const overlay = document.querySelector('.menu-overlay');
+  const body = document.body;
+
+  function closeMenu() {
+    navUl.classList.remove('open');
+    overlay.classList.remove('active');
+    body.classList.remove('menu-open');
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navUl.classList.toggle('open');
+    overlay.classList.toggle('active', isOpen);
+    body.classList.toggle('menu-open', isOpen);
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  navUl.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      closeMenu();
+    }
+  });
+});

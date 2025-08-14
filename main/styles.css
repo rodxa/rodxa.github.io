@@ -10,30 +10,30 @@ body::-webkit-scrollbar, textarea::-webkit-scrollbar {
   background-color: #000000;
 }
 
-body::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
   background-color: rgb(255, 255, 255);
   border-radius: 0px;
 }
 
-*{
+* {
   font-family: "Gabarito", sans-serif;
   font-weight: 100;
 }
 
-#content{
+#content {
   margin-top: 100px;
 }
 
-.header_under{
+.header_under {
   color: white;
 }
 
-.header{
+.header {
   color: white;
 }
 
-a{
-  color:#474747;
+a {
+  color: #474747;
 }
 
 nav {
@@ -63,7 +63,7 @@ nav ul li {
   margin: 0px 5px;
 }
 
-nav ul li a{
+nav ul li a {
   color: white;
   border: solid rgba(255, 255, 255, 0);
   text-decoration: none;
@@ -80,7 +80,7 @@ nav ul li a:hover {
   transition: ease-in-out 0.2s;
 }
 
-.sub{
+.sub {
   color: rgb(255, 255, 255);
   background-color: #000000;
   margin: 10px;
@@ -90,38 +90,39 @@ nav ul li a:hover {
   transition: background-color 0.2s ease;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-.sub:hover{
+.sub:hover {
   border: solid rgb(0, 0, 0);
   color: #000000;
   background-color: #ffffff;
   transition: background-color 0.2s ease;
 }
 
-.sub:focus{
+.sub:focus {
   outline: none;
   border: solid rgb(0, 0, 0);
   color: #000000;
   background-color: #ffffff;
 }
 
-.sub::placeholder{
+.sub::placeholder {
   color: #ffffff;
 }
 
-.sub:hover::placeholder{
+.sub:hover::placeholder {
   color: #000000;
 }
 
-textarea{
-  width:465px;
+textarea {
+  width: 100%;
+  max-width: 465px;
   height: 200px;
   resize: none;
+  box-sizing: border-box;
 }
-
 
 nav ul li a.active {
   background-color: #ffffff;
@@ -131,22 +132,166 @@ nav ul li a.active {
 
 .box, .box-hover {
   border: solid 5px rgba(255, 255, 255, 0);
-  max-width: 80%;
+  max-width: 90%;
   margin: 40px auto;
   padding: 10px 20px;
   padding-top: 14px;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   transition: ease-in-out 0.2s;
+  box-sizing: border-box;
 }
 
-.box-hover:hover{
+.box-hover:hover {
   border: solid 5px rgb(0, 0, 0);
   cursor: pointer;
   transition: ease-in-out 0.2s;
 }
 
-.image{
-  width: 150px;
-  height: 150px;
+.image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 8px;
+    font-size: 18px;
+    overflow-x: hidden;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
+
+  .sub {
+    font-size: 18px;
+    padding: 10px 0;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .box, .box-hover {
+    margin: 16px auto;
+    padding: 12px;
+    width: 98%;
+    max-width: 100%;
+  }
+
+  .image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #content {
+    margin-top: 80px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    z-index: 1100;
+    cursor: pointer;
+  }
+
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+  .menu-overlay.active {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    height: 70px;
+    padding: 0;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    z-index: 1001;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    padding: 18px 0;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #222;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    z-index: 1100;
+    cursor: pointer;
+  }
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Single Page with Dynamic Content</title>
   <link rel="stylesheet" href="styles.css" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
@@ -12,12 +12,14 @@
 </head>
 <body>
   <nav>
+    <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+    <div class="menu-overlay"></div>
     <ul>
       <li><a href="#" onclick="loadPage('home.html'); setActive(this); return false;" class="active">Home</a></li>
       <li><a href="#" onclick="loadPage('devlog.html'); setActive(this); return false;">DevLogs</a></li>
       <li><a href="#" onclick="loadPage('about.html'); setActive(this); return false;">About</a></li>
       <li><a href="#" onclick="loadPage('games.html'); setActive(this); return false;">Games</a></li>
-            <li><a href="#" onclick="loadPage('animations.html'); setActive(this); return false;">Animations</a></li>
+      <li><a href="#" onclick="loadPage('animations.html'); setActive(this); return false;">Animations</a></li>
       <li><a href="#" onclick="loadPage('contact.html'); setActive(this); return false;">Contact</a></li>
     </ul>
   </nav>
