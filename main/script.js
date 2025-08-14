@@ -13,4 +13,4 @@ function setActive(element) {
 }
 
 // Load default page on start
-loadPage('devlog.html');
+loadPage('home.html');
